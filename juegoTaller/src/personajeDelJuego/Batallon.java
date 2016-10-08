@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class Batallon {
+
 	protected List<Personaje> batallon = new LinkedList<Personaje>();
 	
 	public abstract void atacar(Batallon otro);
@@ -12,11 +13,8 @@ public abstract class Batallon {
 	
 	public final void depurarBatallon() {
 		Iterator<Personaje> iter = batallon.iterator();
-		
 		while(iter.hasNext()){
-			// Mientras haya personaje en el batallon
 		    if(!iter.next().estaVivo()) iter.remove();
-		    // Remover a los que no estan vivos
 		}
 	}
 }

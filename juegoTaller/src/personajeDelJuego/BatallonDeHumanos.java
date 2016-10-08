@@ -1,6 +1,7 @@
 package personajeDelJuego;
 
 public class BatallonDeHumanos extends Batallon {
+
 	@Override
 	public void atacar(Batallon otro) {
 		Atacable victima = otro.obtenerProximaVictima();

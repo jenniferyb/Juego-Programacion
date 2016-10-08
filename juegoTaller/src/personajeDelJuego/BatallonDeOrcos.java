@@ -1,6 +1,7 @@
 package personajeDelJuego;
 
 public class BatallonDeOrcos extends Batallon {
+
 	private int ultimoIndice = -1;
 	
 	@Override

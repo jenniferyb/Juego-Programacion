@@ -1,33 +1,30 @@
 package personajeDelJuego;
 
-public class Vampiro extends Personaje{
+public class Vampiro extends Personaje {
+	
 	int ataquesRecibidos;
 	
 	@Override
 	protected void despuesDeAtacar() {
-		// TODO Auto-generated method stub
-		this.salud++;
+		salud++;
 	}
 	
 	@Override
 	protected int calcularPuntosDeAtaque() {
-		// TODO Auto-generated method stub
-		return 10 + this.ataquesRecibidos;
+		return 10 + ataquesRecibidos;
 	}
 
 	@Override
 	protected boolean puedeAtacar() {
-		// TODO Auto-generated method stub
-		return this.energia >= calcularPuntosDeAtaque();
+		return energia >= calcularPuntosDeAtaque();
 	}
 
 	@Override
-	public void serAtacado(int damage) {
-		// TODO Auto-generated method stub
-		super.serAtacado(damage);
+	public void serAtacado(int dano) {
+		super.serAtacado(dano);
 		this.ataquesRecibidos++;
 	}
-	
+
 	@Override
 	public int obtenerPuntosDeDefensa() {
 		// TODO Auto-generated method stub

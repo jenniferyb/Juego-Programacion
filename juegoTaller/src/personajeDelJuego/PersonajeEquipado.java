@@ -1,8 +1,9 @@
 package personajeDelJuego;
 
 public class PersonajeEquipado extends Personaje {
-	Personaje personajeDecorado;
 
+	Personaje personajeDecorado;
+	
 	public PersonajeEquipado(Personaje personajeDecorado) {
 		this.personajeDecorado = personajeDecorado;
 	}
@@ -16,7 +17,7 @@ public class PersonajeEquipado extends Personaje {
 	public int obtenerPuntosDeAtaque() {
 		return this.personajeDecorado.obtenerPuntosDeAtaque();
 	}
-
+	
 	@Override
 	protected int calcularPuntosDeAtaque() {
 		return this.personajeDecorado.calcularPuntosDeAtaque();

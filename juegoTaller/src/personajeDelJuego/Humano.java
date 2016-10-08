@@ -1,6 +1,7 @@
 package personajeDelJuego;
 
 public class Humano extends Personaje {
+	
 	@Override
 	protected int calcularPuntosDeAtaque() {
 		return 10;
@@ -8,7 +9,7 @@ public class Humano extends Personaje {
 
 	@Override
 	protected boolean puedeAtacar() {
-		return this.energia >= 10;
+		return energia >= 10;
 	}
 
 	@Override

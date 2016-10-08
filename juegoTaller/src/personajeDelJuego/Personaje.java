@@ -1,17 +1,15 @@
 package personajeDelJuego;
 
-public abstract class Personaje implements Atacable{
-	// La clase personaje impplemeta la interfaaz Atacable
-		// por lo tanto un personaje es un atacable
-	
+public abstract class Personaje implements Atacable {
+
 	protected int energia = 100;
 	protected int salud = 100;
 	
 	public final void atacar(Atacable atacado) {
-		if (this.puedeAtacar()) {
-			atacado.serAtacado(this.calcularPuntosDeAtaque());
-			energia -= this.calcularPuntosDeAtaque();
-			this.despuesDeAtacar();
+		if (puedeAtacar()) {
+			atacado.serAtacado(calcularPuntosDeAtaque());
+			energia -= calcularPuntosDeAtaque();
+			despuesDeAtacar();
 		}
 	}
 
@@ -24,8 +22,9 @@ public abstract class Personaje implements Atacable{
 		return this.salud > 0;
 	}
 	
-	public void serAtacado(int damage) {
-		this.salud -= damage;
+	@Override
+	public void serAtacado(int dano) {
+		this.salud -= dano;
 	}
 
 	public void serCurado() {
@@ -41,8 +40,9 @@ public abstract class Personaje implements Atacable{
 	}
 
 	public int obtenerPuntosDeAtaque() {
-		return this.calcularPuntosDeAtaque();
+		return calcularPuntosDeAtaque();
 	}
 
 	public abstract int obtenerPuntosDeDefensa();
+
 }

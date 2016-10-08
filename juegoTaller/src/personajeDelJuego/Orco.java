@@ -1,23 +1,22 @@
 package personajeDelJuego;
 
 public class Orco extends Personaje {
+
 	int cantidadDeAtaques;
 	
 	@Override
 	protected void despuesDeAtacar() {
-		this.cantidadDeAtaques++;
+		cantidadDeAtaques++;
 	}
 	
 	@Override
 	protected int calcularPuntosDeAtaque() {
-		// TODO Auto-generated method stub
-		return 10 + this.cantidadDeAtaques;
+		return 10 + cantidadDeAtaques;
 	}
 
 	@Override
 	protected boolean puedeAtacar() {
-		// TODO Auto-generated method stub
-		return this.energia >= calcularPuntosDeAtaque();
+		return energia >= calcularPuntosDeAtaque();
 	}
 
 	@Override
